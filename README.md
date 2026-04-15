@@ -1,4 +1,5 @@
-<img width="1943" height="1093" alt="image" src="https://github.com/user-attachments/assets/cc2ff955-17c2-48c7-81c8-479a0f061850" />
+<img width="1838" height="875" alt="image" src="https://github.com/user-attachments/assets/eded7a59-a011-4d5c-8f8c-a00c7032a6db" />
+
 
 # Alif Madani's Portfolio
 
