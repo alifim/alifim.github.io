@@ -1,187 +1,69 @@
 <img width="1943" height="1093" alt="image" src="https://github.com/user-attachments/assets/cc2ff955-17c2-48c7-81c8-479a0f061850" />
 
-# DevPortfolio Template
+# Alif Madani's Portfolio
 
-A modern, minimalist portfolio template built with Astro and Tailwind CSS. Perfect for developers looking to showcase their skills, experience, and projects in a clean, professional way.
+AI/ML Engineer with 4 years of professional experience specializing in computer vision, digital signal processing, and applied machine learning. Currently pursuing a Master of Engineering at Cornell Tech.
 
-This was completely rebuilt from the ground up from V1. This template was built to be entirely ready to go with a quick config edit (see below) but also provides the ability to easily extend in whatever way you want.
+## About Me
 
-This template also comes with `CLAUDE.md` and `.cursor/rules` files for easy integration with your existing AI workflows.
+I bridge the gap between complex research and scalable engineering, with hands-on experience building generative AI models for medical image registration, developing robust ECG heartbeat classification pipelines, and analyzing satellite imagery. I'm passionate about solving real-world problems through rigorous system architecture and advanced machine learning.
 
-> **📬 Connect & Share!**  
-> For questions and updates, feel free to reach out on [**X (Twitter)**](https://x.com/rfitzio).  
-> If you've built and published your personal site with this template, I'd love to see it! Send me a DM 🚀
+**Expertise:**
+- Computer Vision & Image Processing
+- Deep Learning (PyTorch, TensorFlow)
+- Time-Series Analysis & Signal Processing
+- Generative AI & LLMs
+- Cloud Infrastructure (AWS, GCP)
+- MLOps & Production Systems
 
-## Preview
+## Experience Highlights
 
-To view a live preview of the site, [click here](https://ryanfitzgerald.github.io/devportfolio/).
+**AI/ML Researcher** @ Weill Cornell Medicine (Jan 2026 - Present)
+- Engineered comparative evaluation pipeline for 3D medical image registration
+- Deployed state-of-the-art Swin-Transformer baselines and novel architectures
+- Achieved +9% Dice score improvement on medical imaging tasks
 
-## Built With
+**AI/ML Engineer** @ Groundup.ai (Dec 2022 - Aug 2025)
+- Architected agentic AI systems using LangGraph reducing manual reporting time by 70%
+- Engineered 24/7 IoT pipeline (MQTT, Kafka) handling 300+ sensors with 8TB ScyllaDB backend
+- Led cloud migration from Azure to GCP, eliminating $36K annual spend
 
-- **[Astro](https://astro.build/)** - Static site generator for modern web apps
-- **[Tailwind CSS v4](https://tailwindcss.com/)** - Utility-first CSS framework
-- **[Tabler Icons](https://tabler.io/icons)** - Free and open source icons
-- **TypeScript** - For type-safe configuration
+**Data Scientist / Research Assistant** @ Monash University (Feb 2024 - Mar 2025)
+- Authored IEEE IGARSS 2025 paper on conditional GANs for satellite imagery
+- Trained on 12,000 global Landsat/NASA image pairs with 0.4671 mean RMSE
 
-## Updating the Template
+## Featured Projects
 
-### Configuration
+- **ECG Heartbeat Classification** - Robust 1D ResNet-34 addressing distribution shift (F1: 0.865)
+- **SoloSearch** - Triplet CNN for content-based music retrieval from jazz solos
+- **PosturePro Venture** - Full-stack AI for workout posture correction and biomechanical analysis
 
-The template is designed to be easily customizable through the `src/config.ts` file. This single file controls:
+## Let's Connect
 
-- **Personal Information**: Name, title, description
-- **Accent Color**: Primary color theme (changing this will change the accent color site wide)
-- **Social Links**: Email, LinkedIn, Twitter, GitHub (all optional)
-- **About Section**: Personal bio/description
-- **Skills**: List of technical skills
-- **Projects**: Project showcase with descriptions and links
-- **Experience**: Work history with bullet points
-- **Education**: Educational background and achievements
+- **Email**: [alifilhammadani@gmail.com](mailto:alifilhammadani@gmail.com)
+- **LinkedIn**: [alifim](https://www.linkedin.com/in/alifim/)
+- **Twitter/X**: [@_alifim](https://x.com/_alifim)
+- **GitHub**: [alifim](https://github.com/alifim)
 
-If skills, projects, experience, or education are removed from the config, those sections will be hidden entirely.
+---
 
-### Example structures
+## Development
 
-Here's what the config data structure looks like for each section:
+Built with [Astro](https://astro.build/), [Tailwind CSS v4](https://tailwindcss.com/), and [Tabler Icons](https://tabler.io/icons).
 
-#### Basic Information
-```typescript
-name: "Your Name",
-title: "Your Job Title",
-description: "Brief site description",
-accentColor: "#1d4ed8", // Hex color for theme
-```
+### Local Setup
 
-#### Social Links (all optional)
-```typescript
-social: {
-  email: "your-email@example.com",
-  linkedin: "https://linkedin.com/in/yourprofile",
-  twitter: "https://twitter.com/yourprofile", 
-  github: "https://github.com/yourusername",
-}
-```
-
-#### About Section
-```typescript
-aboutMe: "A paragraph describing yourself, your background, interests, and what you're passionate about. This appears in the About section of your portfolio."
-```
-
-#### Skills
-```typescript
-skills: ["JavaScript", "React", "Node.js", "Python", "AWS", "Docker"]
-```
-
-#### Projects
-```typescript
-projects: [
-  {
-    name: "Project Name",
-    description: "Brief description of what the project does and its impact",
-    link: "https://github.com/yourusername/project",
-    skills: ["React", "Node.js", "AWS"], // Technologies used
-  }
-]
-```
-
-#### Experience
-```typescript
-experience: [
-  {
-    company: "Company Name",
-    title: "Your Job Title",
-    dateRange: "Jan 2022 - Present",
-    bullets: [
-      "Led development of microservices architecture serving 1M+ users",
-      "Reduced API response times by 40% through optimization",
-      "Mentored team of 5 junior developers",
-    ],
-  }
-]
-```
-
-#### Education
-```typescript
-education: [
-  {
-    school: "University Name",
-    degree: "Bachelor of Science in Computer Science",
-    dateRange: "2014 - 2018",
-    achievements: [
-      "Graduated Magna Cum Laude with 3.8 GPA",
-      "Dean's List all semesters",
-      "President of Computer Science Club"
-    ]
-  }
-]
-```
-
-### Icons
-
-The template uses [Tabler Icons](https://tabler.io/icons) for all icons. If you wish to add more icons and have it look consistent with what's already there, you can browse through their extensive icon library.
-
-## Project Structure
-
-```
-devportfolio/
-├── public/
-│   └── favicon.svg          # Site favicon
-├── src/
-│   ├── components/          # Astro components
-│   │   ├── About.astro      # About section
-│   │   ├── Education.astro  # Education section
-│   │   ├── Experience.astro # Work experience section
-│   │   ├── Footer.astro     # Site footer
-│   │   ├── Header.astro     # Navigation header
-│   │   ├── Hero.astro       # Hero/intro section
-│   │   └── Projects.astro   # Projects showcase
-│   ├── pages/
-│   │   └── index.astro      # Main page layout
-│   ├── styles/
-│   │   └── global.css       # Global styles
-│   └── config.ts            # Site configuration
-├── astro.config.mjs         # Astro configuration
-├── package.json             # Project dependencies
-├── tailwind.config.js       # Tailwind configuration
-└── tsconfig.json            # TypeScript configuration
-```
-
-## Local Development
-
-If you'd like to run it locally:
-
-```
-git clone https://github.com/RyanFitzgerald/devportfolio.git
-cd devportfolio
+```bash
 npm install
+npm run dev      # Development server
+npm run build    # Production build
+npm run preview  # Preview build
 ```
 
-After that, start up the Astro dev server with:
+### Built From
 
-```
-npm run dev
-```
-
-## Deployment
-
-The template can be deployed to any static hosting service easily (and in most cases, completely free). Here are some options:
-
-- To deploy with Netlify, [click here](https://docs.astro.build/en/guides/deploy/netlify/).
-- To deploy with Vercel, [click here](https://docs.astro.build/en/guides/deploy/vercel/).
-- To deploy with GitHub Pages, [click here](https://docs.astro.build/en/guides/deploy/github/).
-- To deploy with Cloudflare Pages, [click here](https://docs.astro.build/en/guides/deploy/cloudflare/).
-- To deploy with Render, [click here](https://docs.astro.build/en/guides/deploy/render/).
-
-Want to deploy somewhere else? Find more guides [here](https://docs.astro.build/en/guides/deploy/).
-
-## Changelog
-
-To view the changelog, see CHANGELOG.md.
+This portfolio is built on the [DevPortfolio Template](https://github.com/rfitzio/devportfolio) by [Ryan Fitzgerald](https://github.com/rfitzio). See [ACKNOWLEDGMENTS.md](ACKNOWLEDGMENTS.md) for details.
 
 ## License
 
-This project is fully and completely MIT. See LICENSE.md.
-
-## Questions?
-
-Feel free to reach out on [X (Twitter)](https://x.com/rfitzio) if you have any questions or need help.
+MIT License - See [LICENSE.md](LICENSE.md)

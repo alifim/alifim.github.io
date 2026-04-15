@@ -1,7 +1,13 @@
 {
-  "name": "devportfolio",
+  "name": "alif-madani-portfolio",
   "type": "module",
   "version": "0.0.1",
+  "description": "AI/ML Engineer Portfolio - Built with Astro and Tailwind CSS",
+  "author": "Alif Madani <alifilhammadani@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alifim/alifim.github.io"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
