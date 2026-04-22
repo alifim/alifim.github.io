@@ -33,6 +33,7 @@ export const siteConfig = {
   experience: [
     {
       company: "Weill Cornell Medicine / Cornell Tech",
+      companyLink: "https://weill.cornell.edu/",
       role: "AI/ML Researcher",
       location: "New York, NY",
       date: "January 2026 – Present",
@@ -44,6 +45,7 @@ export const siteConfig = {
     },
     {
       company: "Groundup.ai",
+      companyLink: "https://groundup.ai/who-we-are/",
       role: "AI/ML Engineer",
       location: "Singapore",
       date: "December 2022 – August 2025",
@@ -58,6 +60,7 @@ export const siteConfig = {
     },
     {
       company: "Monash University",
+      companyLink: "https://www.monash.edu/indonesia/our-research/mining-ai-and-gis",
       role: "Data Scientist",
       location: "Indonesia",
       date: "February 2024 – March 2025",
@@ -68,6 +71,7 @@ export const siteConfig = {
     },
     {
       company: "Carro",
+      companyLink: "https://carro.sg/about",
       role: "Machine Learning Engineer",
       location: "Indonesia",
       date: "July 2022 – December 2022",
@@ -78,6 +82,7 @@ export const siteConfig = {
     },
     {
       company: "GDP Labs",
+      companyLink: "https://www.gdplabs.id/about-gdp-labs",
       role: "Artificial Intelligence Engineer",
       location: "Indonesia",
       date: "June 2021 – July 2022",
@@ -135,7 +140,39 @@ export const siteConfig = {
       date: "Fall 2025",
       tech: ["Signal Processing", "MFCCs", "Triplet Margin Loss"],
       description: "Architected a 1D Convolutional Triplet Network optimized via Triplet Margin Loss to map complex improvised audio sequences into a robust semantic embedding space for k-NN classification.",
-      link: "/papers/solosearch-audio-retrieval.pdf"
+      link: "/papers/content-based-audio-retrieval.pdf"
+    },
+    {
+      title: "IMU Gesture Recognition & Time-Series Classification",
+      category: "Deep Learning",
+      date: "Spring 2026",
+      tech: ["Hidden Markov Models", "Time-Series", "Sensor Fusion", "K-Means"],
+      description: "Engineered an inertial measurement unit (IMU) time-series classification system to recognize complex 6-DOF spatial gestures using 3-axis accelerometer and gyroscope data. Architected K-Means clustering for vector quantization and trained left-to-right HMMs with Baum-Welch algorithm, implementing all forward-backward calculations in log-space to eliminate numerical underflow across long temporal sequences.",
+      link: "/papers/imu-hmm-time-series-classification.pdf"
+    },
+    {
+      title: "Probabilistic Color Segmentation & Depth Estimation",
+      category: "Computer Vision",
+      date: "Spring 2026",
+      tech: ["Computer Vision", "YCrCb Color Space", "Maximum Likelihood Estimation", "Polynomial Regression"],
+      description: "Engineered a vision-based obstacle detection pipeline utilizing YCrCb color space to decouple luminance from chrominance across varying lighting conditions. Trained multivariate Gaussian distribution models via MLE with quantized 6-bit Look-Up Tables for real-time inference, and implemented 4th-degree polynomial regression achieving 12.78 cm RMSE on distance estimation.",
+      link: "/papers/color-segmentation-depth-estimation.pdf"
+    },
+    {
+      title: "Robust ECG Time-Series Reconstruction & Classification",
+      category: "Deep Learning",
+      date: "Fall 2025",
+      tech: ["1D ResNet", "Focal Loss", "Anomaly Detection", "Domain Shift"],
+      description: "Engineered an end-to-end anomaly detection pipeline classifying cardiovascular heartbeats from low-fidelity 128x128 grayscale images, overcoming extreme class imbalance (<1% minorities) and severe domain distribution shifts. Architected custom signal-reconstruction module translating 2D rasterized images to 1D time-series, and trained deep 1D ResNet-34 with Focal Loss and stratified k-fold cross-validation, boosting performance from 0.43 baseline to robust 0.836 test score.",
+      link: "/papers/robust-ecg-classification.pdf"
+    },
+    {
+      title: "Semi-Supervised Sentiment Classification Pipeline",
+      category: "NLP",
+      date: "Fall 2025",
+      tech: ["FastText", "XGBoost", "NLP", "Pseudo-Labeling"],
+      description: "Architected a 5-stage NLP optimization pipeline combining 300-dimensional FastText embeddings and XGBoost gradient boosting for 5-class sentiment classification, achieving 93.5% test accuracy. Engineered supervised pseudo-labeling augmentation to leverage sparse datasets where 58% of 59,000+ training samples were unlabeled, outperforming traditional KNN Label Propagation while executing rigorous ablation studies.",
+      link: "/papers/sentiment-classification-2025.pdf"
     }
   ],
 
@@ -161,7 +198,8 @@ export const siteConfig = {
       title: "Digital Elevation Model Estimation from RGB Satellite Imagery using Generative Deep Learning",
       authors: "A. I. Madani, R. A. Kuswati, A. M. Lechner, M. R. U. Saputra",
       conference: "IEEE International Geoscience and Remote Sensing Symposium (IGARSS)",
-      year: "2025"
+      year: "2025",
+      link: "https://ieeexplore.ieee.org/document/11243010" // Add your publication link here
     }
   ]
 };

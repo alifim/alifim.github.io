@@ -1,0 +1,97 @@
+---
+import { siteConfig } from "../config";
+const hasPublications = siteConfig.publications && siteConfig.publications.length > 0;
+---
+
+{
+  hasPublications && (
+    <section id="publications" class="p-8 sm:p-12 md:p-16 lg:p-24">
+      <div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+              Publications
+            </h2>
+            <div
+              class="w-[75px] h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+          </div>
+
+          <div class="lg:col-span-8">
+            <div class="space-y-8">
+              {siteConfig.publications.map((pub: {
+                title: string;
+                authors: string;
+                conference: string;
+                year: string;
+                link?: string;
+              }) => {
+                const Component = pub.link ? "a" : "div";
+                const linkProps = pub.link
+                  ? {
+                      href: pub.link,
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    }
+                  : {};
+
+                return (
+                  <div class="group relative">
+                    <Component
+                      {...linkProps}
+                      class={`block relative bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 transition-all duration-300 ${
+                        pub.link
+                          ? "hover:shadow-md hover:border-gray-200 hover:-translate-y-0.5 cursor-pointer"
+                          : ""
+                      }`}
+                    >
+                      {pub.link && (
+                        <div class="absolute top-4 right-4 sm:top-5 sm:right-5 md:top-6 md:right-6 w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700">
+                          <svg
+                            class="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M7 17L17 7M17 7H7M17 7V17"
+                            />
+                          </svg>
+                        </div>
+                      )}
+
+                      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 pr-10 sm:pr-12 md:pr-14">
+                        <div class={pub.link ? "pr-10 sm:pr-12 md:pr-14" : ""}>
+                          <h3 class="text-lg sm:text-xl font-semibold text-gray-900">
+                            {pub.title}
+                          </h3>
+                          <p class="text-sm sm:text-base text-gray-600 mt-1">
+                            {pub.authors}
+                          </p>
+                        </div>
+                        <span class="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0 flex-shrink-0">
+                          {pub.year}
+                        </span>
+                      </div>
+
+                      <p
+                        class="text-sm sm:text-base"
+                        style={`color: ${siteConfig.accentColor}`}
+                      >
+                        {pub.conference}
+                      </p>
+                    </Component>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
