@@ -50,12 +50,16 @@ export const siteConfig = {
       location: "Singapore",
       date: "December 2022 – August 2025",
       achievements: [
-        "Secured a signed enterprise contract with Qatar Airport by architecting the mathematical models and technical strategy for a predictive asset management pilot.",
-        "Led the deployment of a mission-critical Video Content Analytics (VCA) pilot for the Singapore Armed Forces, winning a competitive tender to automate 24/7 workshop safety surveillance.",
-        "Architected an agentic AI system using LangGraph and Prefect, enabling AI agents to autonomously query backend APIs and slashing vibration analysts' manual reporting time by ~70%.",
-        "Eliminated data-loading bottlenecks by engineering a unified FastAPI service that concurrently serves heavy vibration data, optimizing ScyllaDB querying to achieve <100ms latency.",
-        "Designed and deployed a sound-based anomaly detection system with <0.1s latency on edge TPUs, preventing an estimated $100,000+ in annual material losses for semiconductor lapping machines.",
-        "Engineered a 24/7, event-driven IoT data pipeline (MQTT, Kafka) for 300+ sensors and scaled its ScyllaDB backend to 8TB."
+        "Secured an enterprise contract with a major international airport by engineering predictive RUL and fault probability models, enabling engineering teams to optimize OPEX/CAPEX and justify asset rehabilitation strategies.",
+        "Won a competitive national defense tender by engineering object detection and pose estimation algorithms for automated workshop safety surveillance.",
+        "Empowered rapid naval emergency response by developing trajectory and ETA forecasting algorithms within an on-premise backend processing live API data for 10,000+ global vessels.",
+        "Prevented $100,000+ in annual material losses for a global semiconductor manufacturer by deploying a <0.1s latency sound anomaly detection system on edge TPUs to instantly halt catastrophic wafer crunch events.",
+        "Deployed an on-premise safety solution for a major APAC maritime hub, resolving complex domain-shift data issues to implement a real-time, 30 FPS video anomaly detection model with 90% accuracy.",
+        "Architected an agentic AI system (LangGraph, Prefect) with autonomous tool-calling capabilities, slashing manual vibration analysis reporting time by ~70% (from 1-2 days to <5 hours).",
+        "Engineered a 24/7 event-driven IoT pipeline (MQTT, Kafka) for 300+ sensors and scaled a ScyllaDB backend to 8TB, achieving <100ms latency to eliminate data-loading bottlenecks for downstream AI agents.",
+        "Led an Azure to GCP cloud migration and automated infrastructure provisioning via Terraform, eliminating $36,000 in annual spend and increasing maintenance capacity by 3X-5X.",
+        "Engineered a unified FastAPI service to concurrently serve high-frequency vibration data to clients, AI agents, and internal analysts, ensuring seamless real-time data access across three distinct downstream systems.",
+        "Developed an interactive Streamlit dashboard for vibration analysts to visualize signal features (waveform, FFT, envelope spectrum), reducing diagnosis time from 1 day to ~10 minutes by eliminating the need for manual Python scripting."
       ]
     },
     {
@@ -76,8 +80,9 @@ export const siteConfig = {
       location: "Indonesia",
       date: "July 2022 – December 2022",
       achievements: [
-        "Engineered an end-to-end CatBoost pricing pipeline that automatically scraped competitor marketplaces and factored in nuanced conditions, scaling pricing operations to under 6 hours.",
-        "Transformed data science workflows by migrating legacy, unversioned SageMaker notebooks to modular Docker containers on Amazon ECS, integrated with GitHub and Terraform."
+        "Automated market-wide vehicle valuations by engineering an end-to-end CatBoost pricing pipeline that replaced manual spreadsheets, scraping hundreds of thousands of competitor data points to reduce the complete prediction cycle to under 6 hours.",
+        "Established production-grade MLOps by translating qualitative business logic into quantitative requirements and migrating unversioned SageMaker notebooks to modular Docker containers on Amazon ECS via Terraform.",
+        "Prevented inaccurate pricing deployments by designing a systematic pre-production testing architecture integrated with GitHub for robust version control and cross-team reproducibility."
       ]
     },
     {
@@ -87,8 +92,8 @@ export const siteConfig = {
       location: "Indonesia",
       date: "June 2021 – July 2022",
       achievements: [
-        "Architected an end-to-end serverless analytics pipeline using AWS Glue, Athena, and Step Functions, integrating MLflow for experiment tracking.",
-        "Slashed daily batch-prediction infrastructure costs by an estimated 70%+ by transitioning to an event-driven, pay-per-execution AWS Lambda architecture."
+        "Slashed batch-prediction infrastructure costs by 70%+ by migrating from always-on servers to a pay-per-execution, serverless AWS pipeline utilizing Glue, Athena, and Step Functions.",
+        "Deployed highly adaptable time-series forecasting modules on AWS Lambda, utilizing MLflow to track experiments and accurately predict diverse enterprise metrics ranging from retail sales to HR anomalies."
       ]
     }
   ],
