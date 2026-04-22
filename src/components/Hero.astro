@@ -140,13 +140,13 @@ import { siteConfig } from "../config";
         class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 animate-fade-in animation-delay-200"
       >
         I'm <span style={{ color: siteConfig.accentColor }}
-          >{siteConfig.name}</span
+          >{siteConfig.profile.name}</span
         >
       </h1>
       <p
         class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 animate-fade-in animation-delay-400"
       >
-        {siteConfig.title}
+        {siteConfig.profile.title}
       </p>
     </div>
   </div>
@@ -154,9 +154,9 @@ import { siteConfig } from "../config";
     class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 md:p-24 flex gap-x-4 sm:gap-x-6 md:gap-x-8 text-gray-700 animate-fade-in animation-delay-600"
   >
     {
-      siteConfig.social?.email && (
+      siteConfig.profile?.email && (
         <a
-          href={`mailto:${siteConfig.social.email}`}
+          href={`mailto:${siteConfig.profile.email}`}
           aria-label="Email"
           class="transition-colors duration-300 hover:text-[var(--accent-color)]"
         >
@@ -180,9 +180,9 @@ import { siteConfig } from "../config";
       )
     }
     {
-      siteConfig.social?.linkedin && (
+      siteConfig.profile?.linkedin && (
         <a
-          href={siteConfig.social.linkedin}
+          href={siteConfig.profile.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
@@ -213,39 +213,24 @@ import { siteConfig } from "../config";
       )
     }
     {
-      siteConfig.social?.twitter && (
+      siteConfig.profile?.medium && (
         <a
-          href={siteConfig.social.twitter}
+          href={siteConfig.profile.medium}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Twitter"
+          aria-label="Medium"
           class="transition-colors duration-300 hover:text-[var(--accent-color)]"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
-          >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
-            </>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8">
+            <path d="M2.846 6.36c.03-.295-.083-.586-.303-.784l-2.24-2.7v-.405h7.14l5.378 11.795 4.728-11.795h6.633v.405l-1.917 1.837c-.165.126-.247.329-.213.528v13.28c-.034.199.048.402.213.528l1.88 1.837v.405h-9.412v-.405l1.95-1.903c.19-.19.19-.246.19-.528V7.663l-5.423 13.48h-.735L4.26 7.663v9.035c-.052.38.076.762.347 1.038l2.54 3.08v.405H0v-.405l2.54-3.08c.27-.275.39-.658.346-1.038V6.36z"/>
           </svg>
         </a>
       )
     }
     {
-      siteConfig.social?.github && (
+      siteConfig.profile?.github && (
         <a
-          href={siteConfig.social.github}
+          href={siteConfig.profile.github}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"

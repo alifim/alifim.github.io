@@ -1,127 +1,167 @@
 export const siteConfig = {
-  name: "Alif Madani",
-  title: "AI/ML Engineer | 4 YOE",
-  description: "Portfolio website of Alif Madani - AI/ML Engineer specializing in Computer Vision, DSP, and Applied Machine Learning.",
-  accentColor: "#001a61",
-  social: {
+  accentColor: "#6366f1", // Tailwind indigo-500 as default
+  profile: {
+    name: "Alif Ilham Madani",
+    title: "AI/ML Engineer | 4 YOE",
     email: "alifilhammadani@gmail.com",
-    linkedin: "https://www.linkedin.com/in/alifim/",
-    twitter: "https://x.com/_alifim",
+    location: "New York, NY",
     github: "https://github.com/alifim",
+    linkedin: "https://linkedin.com/in/alifim",
+    medium: "https://medium.com/@alifim",
+    summary: "AI/ML Engineer specializing in the intersection of hardware and software. Proven track record of architecting scalable, end-to-end machine learning systems, from edge TPU deployments for predictive maintenance to building generative AI models for satellite imagery.",
   },
-  aboutMe:
-    "I am an AI/ML Engineer with four years of professional experience, currently completing my Master of Engineering in Electrical and Computer Engineering at Cornell Tech. I specialize in computer vision, digital signal processing, and applied machine learning. My work bridges the gap between complex research and scalable engineering, with hands-on experience building generative AI models for medical image registration, developing robust ECG heartbeat classification pipelines, and analyzing satellite imagery. I am actively seeking roles where I can leverage my background in rigorous system architecture and advanced ML to solve complex, real-world problems.",
+  
   skills: [
-    "PyTorch",
-    "TensorFlow",
-    "LangGraph",
-    "Python",
-    "ScyllaDB",
-    "Kafka",
-    "AWS",
-    "GCP",
-    "Docker",
-    "Terraform",
-    "OpenCV",
-    "SQL"
+    {
+      category: "ML & AI",
+      items: ["PyTorch", "TensorFlow", "Keras", "LangGraph", "YOLO", "Scikit-Learn", "OpenCV", "Triton"]
+    },
+    {
+      category: "Programming & Data",
+      items: ["Python", "SQL", "Java", "Pandas", "NumPy", "Bash/Shell"]
+    },
+    {
+      category: "Data Engineering",
+      items: ["Kafka", "RabbitMQ", "MQTT", "ScyllaDB", "PostgreSQL", "MongoDB"]
+    },
+    {
+      category: "Cloud & MLOps",
+      items: ["AWS", "GCP", "Azure", "Docker", "Terraform", "MLflow", "Git"]
+    }
   ],
-  projects: [
-    {
-      name: "ECG Heartbeat Classification under Distribution Shift",
-      description:
-        "Engineered a robust 1D ResNet-34 pipeline addressing critical data distribution shifts and class imbalance. Transformed 2D images into 1D time-series signals to boost performance from a 0.67 baseline to a 0.865 F1 score.",
-      link: "https://github.com/alifim",
-      skills: ["PyTorch", "ResNet", "Time-Series", "Ensemble Inference"],
-    },
-    {
-      name: "SoloSearch: Content-Based Music Retrieval",
-      description:
-        "Developed a Triplet CNN architecture with margin loss to identify jazz songs from improvised solos. Conducted a rigorous study on distribution shift and acoustic overfitting against statistical MFCC baselines.",
-      link: "https://github.com/alifim",
-      skills: ["CNN", "Deep Learning", "Audio Processing", "Signal Processing"],
-    },
-    {
-      name: "PosturePro Venture: Workout Posture Correction",
-      description:
-        "Engineered a full-stack AI prototype leveraging multimodal APIs to perform zero-shot visual analysis of workout photos, extracting structured biomechanical data to generate automated lifting scores and safety corrections.",
-      link: "https://github.com/alifim",
-      skills: ["Generative AI", "Vision-Language", "Full-Stack", "Prompt Engineering"],
-    },
-  ],
+
   experience: [
     {
-      company: "Weill Cornell Medicine",
-      title: "AI/ML Researcher",
-      dateRange: "Jan 2026 - Present",
-      bullets: [
-        "Engineered the comparative evaluation pipeline for a 3D medical image registration project.",
-        "Deployed and tuned state-of-the-art Swin-Transformer baselines (TransMorph) to rigorously benchmark a novel keypoint-based architecture (RealKeyMorph).",
-        "Standardized heterogeneous clinical datasets (abdominal and brain MRI) to generate reproducible baseline metrics, confirming the novel model's +9% Dice score improvement and ~49% Hausdorff Distance reduction."
-      ],
+      company: "Weill Cornell Medicine / Cornell Tech",
+      role: "AI/ML Researcher",
+      location: "New York, NY",
+      date: "January 2026 – Present",
+      achievements: [
+        "Engineered the comparative evaluation pipeline for an ISMRM-accepted 3D medical image registration project.",
+        "Deployed and tuned state-of-the-art Swin-Transformer baselines (TransMorph) to rigorously benchmark a novel keypoint-based architecture.",
+        "Standardized heterogeneous clinical datasets (abdominal and brain MRI) to generate reproducible baseline metrics, confirming a +9% Dice score improvement and ~49% Hausdorff Distance reduction."
+      ]
     },
     {
       company: "Groundup.ai",
-      title: "AI/ML Engineer",
-      dateRange: "Dec 2022 - Aug 2025",
-      bullets: [
-        "Secured a signed enterprise contract with a major Middle Eastern aviation hub by architecting predictive algorithms to forecast Remaining Useful Life (RUL) and OPEX/CAPEX impacts.",
-        "Solely developed the Video Content Analytics (VCA) prototype for a national government agency, achieving a >90% True Positive Rate and winning a competitive enterprise contract.",
-        "Architected an agentic AI system using LangGraph and Prefect with autonomous tool-calling, slashing vibration analysts' manual reporting time by ~70%.",
-        "Eliminated data bottlenecks by engineering a 24/7 IoT pipeline (MQTT, Kafka) for 300+ sensors, scaling a ScyllaDB backend to 8TB with <100ms latency.",
-        "Led a cloud migration from Azure to GCP, eliminating $36,000 in annual cloud spend, and utilized Terraform to automate provisioning."
-      ],
+      role: "AI/ML Engineer",
+      location: "Singapore",
+      date: "December 2022 – August 2025",
+      achievements: [
+        "Secured a signed enterprise contract with Qatar Airport by architecting the mathematical models and technical strategy for a predictive asset management pilot.",
+        "Led the deployment of a mission-critical Video Content Analytics (VCA) pilot for the Singapore Armed Forces, winning a competitive tender to automate 24/7 workshop safety surveillance.",
+        "Architected an agentic AI system using LangGraph and Prefect, enabling AI agents to autonomously query backend APIs and slashing vibration analysts' manual reporting time by ~70%.",
+        "Eliminated data-loading bottlenecks by engineering a unified FastAPI service that concurrently serves heavy vibration data, optimizing ScyllaDB querying to achieve <100ms latency.",
+        "Designed and deployed a sound-based anomaly detection system with <0.1s latency on edge TPUs, preventing an estimated $100,000+ in annual material losses for semiconductor lapping machines.",
+        "Engineered a 24/7, event-driven IoT data pipeline (MQTT, Kafka) for 300+ sensors and scaled its ScyllaDB backend to 8TB."
+      ]
     },
     {
       company: "Monash University",
-      title: "Data Scientist / Research Assistant",
-      dateRange: "Feb 2024 - Mar 2025",
-      bullets: [
-        "Authored an IEEE IGARSS 2025 accepted paper detailing a novel conditional GAN (pix2pix) that generates Digital Elevation Models (DEMs) directly from free 2D RGB satellite imagery.",
-        "Architected a two-stage training pipeline processing 12,000 global Landsat/NASA SRTM image pairs, utilizing SSIM-based fine-tuning to reconstruct complex mountainous terrains with a 0.4671 mean RMSE.",
-        "Engineered a cost-effective alternative to expensive LiDAR, empowering geospatial researchers in resource-constrained settings to perform critical hydrological modeling."
-      ],
+      role: "Data Scientist",
+      location: "Indonesia",
+      date: "February 2024 – March 2025",
+      achievements: [
+        "Architected a two-stage training pipeline processing 12,000 global Landsat/NASA SRTM image pairs to reconstruct complex mountainous terrains with a 0.4671 mean RMSE.",
+        "Authored an IEEE IGARSS 2025 accepted paper detailing a novel conditional GAN (pix2pix) that generates Digital Elevation Models (DEMs) directly from free 2D RGB satellite imagery."
+      ]
     },
     {
-      company: "CARRO",
-      title: "Machine Learning Engineer",
-      dateRange: "Jul 2022 - Dec 2022",
-      bullets: [
-        "Revolutionized vehicle valuation by replacing manual spreadsheet workflows with an automated, end-to-end CatBoost pricing pipeline.",
-        "Engineered automated scraping and ingestion pipelines to process hundreds of thousands of competitor data points, reducing the market prediction cycle to under 6 hours.",
-        "Transformed data science workflows by migrating legacy SageMaker notebooks to modular Docker containers on Amazon ECS.",
-        "Integrated GitHub and Terraform to establish production-grade version control and pre-production model evaluation architectures."
-      ],
+      company: "Carro",
+      role: "Machine Learning Engineer",
+      location: "Indonesia",
+      date: "July 2022 – December 2022",
+      achievements: [
+        "Engineered an end-to-end CatBoost pricing pipeline that automatically scraped competitor marketplaces and factored in nuanced conditions, scaling pricing operations to under 6 hours.",
+        "Transformed data science workflows by migrating legacy, unversioned SageMaker notebooks to modular Docker containers on Amazon ECS, integrated with GitHub and Terraform."
+      ]
     },
     {
       company: "GDP Labs",
-      title: "Artificial Intelligence Engineer",
-      dateRange: "Jun 2021 - Jul 2022",
-      bullets: [
-        "Architected an end-to-end, event-driven analytics pipeline using AWS (Glue, Athena, Step Functions) and MLflow.",
-        "Slashed daily batch-prediction infrastructure costs by over 70% by transitioning from always-on servers to a purely pay-per-execution serverless architecture.",
-        "Deployed a highly adaptable time-series forecasting module on AWS Lambda to predict diverse client metrics, from retail sales to HR anomalies."
-      ],
-    },
+      role: "Artificial Intelligence Engineer",
+      location: "Indonesia",
+      date: "June 2021 – July 2022",
+      achievements: [
+        "Architected an end-to-end serverless analytics pipeline using AWS Glue, Athena, and Step Functions, integrating MLflow for experiment tracking.",
+        "Slashed daily batch-prediction infrastructure costs by an estimated 70%+ by transitioning to an event-driven, pay-per-execution AWS Lambda architecture."
+      ]
+    }
   ],
+
+  projects: [
+    {
+      title: "LLM Inference Optimization",
+      category: "Systems & Optimization",
+      date: "Spring 2026",
+      tech: ["PyTorch", "OpenAI Triton", "CUDA", "INT4 Quantization"],
+      description: "Accelerated the PyTorch execution graph utilizing torch.compile and engineered a custom Triton INT4 GEMV kernel. Synergistically integrated flex_attention and Triton autotuning to drive significant improvements in Time-To-First-Token (TTFT) and decode throughput.",
+      link: "/papers/llm-inference-optimization.pdf"
+    },
+    {
+      title: "Edge AI Speech Recognition & Compression",
+      category: "Edge & Hardware",
+      date: "Spring 2026",
+      tech: ["TinyML", "TFLite Micro", "C++", "QAT"],
+      description: "Engineered an end-to-end TinyML audio classification pipeline deployed onto an Arduino Nano 33 BLE. Implemented Quantization-Aware Training (QAT) and structured channel pruning to achieve an 18% physical inference speedup directly on MCU silicon.",
+      link: "/papers/tinyml-audio-quantization.pdf"
+    },
+    {
+      title: "Particle Filter SLAM & 2D Grid Mapping",
+      category: "Robotics & Perception",
+      date: "Spring 2026",
+      tech: ["Sensor Fusion", "Kinematics", "Probabilistic Modeling"],
+      description: "Engineered a 2D SLAM system from scratch fusing 4-channel wheel encoder telemetry with Hokuyo Lidar. Architected a Sequential Monte Carlo algorithm with dynamic roulette-wheel resampling to achieve large-scale loop closure.",
+      link: "/papers/particle-filter-slam-mapping.pdf"
+    },
+    {
+      title: "Deep Learning Hardware Profiling",
+      category: "Systems & Optimization",
+      date: "Spring 2026",
+      tech: ["Hardware Profiling", "Roofline Modeling", "HPC"],
+      description: "Constructed theoretical and empirical Roofline models to analyze operational intensity and peak TFLOPS across 10 deep neural network architectures, isolating performance bottlenecks within heterogeneous CPU and GPU environments.",
+      link: "/papers/dl-hardware-profiling.pdf"
+    },
+    {
+      title: "PosturePro: Biomechanical AI Analysis",
+      category: "Full-Stack AI",
+      date: "Fall 2025",
+      tech: ["TypeScript", "Vite", "Gemini API", "Drizzle ORM"],
+      description: "Engineered a full-stack TypeScript web application integrating Vision-Language Models to perform zero-shot visual analysis of biomechanical form in workout imagery, utilizing an automated prompt-engineering pipeline.",
+      link: "https://github.com/alifim/posture-pro-demo"
+    },
+    {
+      title: "SoloSearch: Audio Retrieval & Contrastive Learning",
+      category: "Deep Learning",
+      date: "Fall 2025",
+      tech: ["Signal Processing", "MFCCs", "Triplet Margin Loss"],
+      description: "Architected a 1D Convolutional Triplet Network optimized via Triplet Margin Loss to map complex improvised audio sequences into a robust semantic embedding space for k-NN classification.",
+      link: "/papers/solosearch-audio-retrieval.pdf"
+    }
+  ],
+
   education: [
     {
-      school: "Cornell Tech, Cornell University",
+      institution: "Cornell Tech, Cornell University",
+      location: "New York, NY",
       degree: "MEng in Electrical and Computer Engineering",
-      dateRange: "Aug 2025 - May 2026",
-      achievements: [
-        "GPA: 4.0 | Government Scholarship Grantee",
-        "AI/ML Researcher at Weill Cornell Medicine (Medical Image Registration)",
-        "Relevant Coursework: Digital Signal Processing, Computer Vision, Applied Machine Learning"
-      ],
+      date: "May 2026",
+      details: "GPA: 4.0 | Government Scholarship"
     },
     {
-      school: "Institut Teknologi Bandung",
+      institution: "Bandung Institute of Technology",
+      location: "Bandung, Indonesia",
       degree: "BS in Electrical Engineering",
-      dateRange: "2016 - 2021",
-      achievements: [
-        "GPA: 3.9/4.0 (Cum Laude)",
-        "Relevant Coursework: Advanced Calculus, Signal Processing, System Architecture"
-      ],
-    },
+      date: "April 2021",
+      details: "GPA: 3.9/4.0 (Cum Laude)"
+    }
   ],
+
+  publications: [
+    {
+      title: "Digital Elevation Model Estimation from RGB Satellite Imagery using Generative Deep Learning",
+      authors: "A. I. Madani, R. A. Kuswati, A. M. Lechner, M. R. U. Saputra",
+      conference: "IEEE International Geoscience and Remote Sensing Symposium (IGARSS)",
+      year: "2025"
+    }
+  ]
 };
